@@ -1,0 +1,35 @@
+/* Responsive CSS for Particula Controls */
+@media (max-width: 1400px) {
+
+    /* Move audio controls down to avoid overlap */
+    body>div[style*="position: absolute"][style*="top: 10px"][style*="right: 310px"] {
+        top: 60px !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Stack audio controls at bottom on mobile */
+    body>div[style*="position: absolute"][style*="top: 10px"][style*="right: 310px"] {
+        position: fixed !important;
+        top: auto !important;
+        bottom: 60px !important;
+        left: 50% !important;
+        right: auto !important;
+        transform: translateX(-50%) !important;
+        width: calc(100% - 20px) !important;
+        max-width: 600px !important;
+    }
+
+    body>div[style*="position: absolute"]>div[style*="display: flex"] {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+
+    .dg.main {
+        top: auto !important;
+        bottom: 10px !important;
+        right: 10px !important;
+        font-size: 11px !important;
+    }
+}

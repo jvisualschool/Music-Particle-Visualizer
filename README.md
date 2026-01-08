@@ -1,60 +1,64 @@
-# Particula
+# Particula (파티큘라)
 
-Particula is an interactive music-driven particle visualizer built with WebGL (Three.js).  
-It reacts to sound, frequency, and rhythm to create a dynamic audiovisual experience in 3D space.
+**Version: 1.1.0**
 
-## Demo
+안녕하세요! 👋  
+**Particula**는 음악의 리듬과 주파수에 반응하여 춤추는 3D 파티클 비주얼라이저입니다. WebGL(Three.js)을 사용하여 만들었으며, 여러분의 눈과 귀를 즐겁게 해드릴 환상적인 시각적 경험을 제공합니다.
 
-Demo video: https://youtu.be/AroTkLpfSSA  
-(Add the correct link once the video is uploaded.)
+## 🎵 라이브 데모 (Demo)
+지금 바로 확인해보세요!  
+👉 **[Live Demo 보러가기](https://jvibeschool.org/MUSIC_P/)**
 
-## Running locally
+## ✨ 주요 기능 (Features)
 
-Requires Node.js: https://nodejs.org
+**1. 음악에 반응하는 5개의 구 (Spheres)**
+*   저음부터 고음까지, 각기 다른 주파수에 반응하는 다섯 개의 구가 음악에 맞춰 움직입니다.
+*   비트에 따라 물결치고, 소리의 강약에 따라 크기가 변하는 역동적인 모습을 감상하세요.
 
-1. Open a terminal in the project folder
-2. Run a local server:
+**2. 다양한 오디오 입력 방식**
+*   **파일 재생**: `Songs` 폴더에 있는 샘플 음악을 듣거나, 여러분이 가지고 있는 MP3 파일을 직접 재생할 수 있습니다.
+*   **마이크 입력**: 마이크를 켜고 직접 소리를 내보세요! 여러분의 목소리나 주변 음악에 맞춰 파티클이 춤을 춥니다.
 
+**3. 직관적이고 예쁜 디자인**
+*   **프리셋 (Presets)**: 다양한 분위기의 시각 효과를 미리 설정해두었습니다. 클릭 한 번으로 분위기를 바꿔보세요.
+*   **다크/라이트 모드**: 밤에는 눈이 편안한 다크 모드로, 낮에는 산뜻한 라이트 모드로 즐길 수 있습니다.
+*   **상세 설정**: 파티클의 개수, 크기, 색상, 움직임 등을 내 마음대로 조절할 수 있습니다.
+
+## 🚀 실행 방법 (How to Run)
+
+이 프로젝트를 로컬 컴퓨터에서 실행하고 싶으신가요? Node.js가 설치되어 있다면 아주 간단합니다!
+
+1. 터미널을 열고 프로젝트 폴더로 이동합니다.
+2. 다음 명령어를 입력하여 로컬 서버를 실행합니다:
+    ```bash
     npx serve .
+    ```
+3. 브라우저 주소창에 `http://localhost:3000`을 입력하면 끝!
 
-3. Open this address in your browser:
+## 🛠 기술 스택 (Tech Stack)
 
-    http://localhost:3000
+이 프로젝트는 다음과 같은 멋진 기술들로 만들어졌습니다:
 
-Alternatively, use the provided run.bat file (Windows only).
+*   **Three.js**: 3D 그래픽을 웹에서 구현하기 위한 마법 같은 라이브러리
+*   **WebGL**: 고성능 그래픽 렌더링
+*   **Web Audio API**: 오디오 데이터를 실시간으로 분석
+*   **dat.GUI**: 실시간으로 변수를 조절하는 컨트롤 패널
 
-## Features
+## 👨‍💻 만든 사람들 (Credits)
 
-- Five independent particle spheres reacting to different frequency bands
-- Noise and turbulence dynamics influenced by audio input
-- Beat detection with reactive wave effects
-- Switch between audio player and microphone input
-- Real-time parameter editing via built-in GUI
-- Preset system (save, load, export, import)
+이 프로젝트는 사람과 AI의 협업으로 탄생했습니다.
 
-## Collaboration
+*   **Original Creator**: [Humprt (vibe-coder)](https://github.com/Humprt/particula) - 이 프로젝트의 원작자이자 메인 개발자입니다.
+*   **Co-Developer**: [Jinho Jung](mailto:jvisualschool@gmail.com) - 버전 1.1.0 업데이트 및 UI/UX 개선을 담당했습니다.
+*   **AI Assistant**: Caroline (ChatGPT 4o) - 코드 구현과 아이데이션을 도운 AI 파트너입니다.
 
-- This is the official repository of the Particula project.  
-- Feel free to experiment, modify, and contribute.
-- If you publish a fork or derivative version, please acknowledge the original and do not use the name "Particula" without permission.
-- Open a pull request, start a discussion, or fork the repo and experiment. If you build something cool, we’d love to see it – especially presets or entirely new directions.
-- Share your presets: https://github.com/Humprt/particula/issues/3
+## 🔗 원본 프로젝트 (Original Project)
 
-## Ideas for Future Development
+이 프로젝트는 **Humprt**님의 **Particula**를 기반으로 발전된 버전입니다.  
+원본 프로젝트에도 많은 관심과 스타(⭐️) 부탁드립니다!  
+👉 **[GitHub 저장소 방문하기](https://github.com/Humprt/particula)**
 
-- Add a moving camera to enhance depth and immersion.
-- Decouple the spheres from the center – let them float freely in 3D space.
-- Try alternative shapes: rings, ellipsoids, toruses.
-- Make the noise animation slow down or sync with tempo.
-- Assign more particles to lower frequencies (logarithmic sound spectrum distribution).
+## 📝 라이선스 (License)
 
-## License
-
-MIT © 2025 Humprt Pum  
-Free to use and modify with attribution.
-
-## Credits
-
-Built by a human-AI duo:  
-**Humprt (vibe-coder)** and **Caroline (ChatGPT 4o)**  
-Born from long nights, experimental tweaks, and love for sound and visual poetry.
+**MIT License** © 2025 Humprt Pum  
+자유롭게 사용하고 수정하실 수 있습니다. (출처만 남겨주세요!)

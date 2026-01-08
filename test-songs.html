@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Song List Test</title>
+</head>
+
+<body>
+    <h1>Testing Songs Directory</h1>
+    <div id="output"></div>
+    <script>
+        async function testSongs() {
+            try {
+                const response = await fetch('Songs/');
+                const text = await response.text();
+                document.getElementById('output').innerHTML = '<h2>Directory Listing:</h2><pre>' + text.substring(0, 500) + '</pre>';
+
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, 'text/html');
+
+                const files = Array.from(doc.querySelectorAll('a'))
+                    .map(a => decodeURIComponent(a.href))
+                    .filter(href => href.match(/\.(mp3|wav|ogg)$/i))
+                    .map(href => {
+                        const fileName = href.split('/').pop();
+                        return {
+                            path: `Songs/${fileName}`,
+                            name: fileName.replace(/\.(mp3|wav|ogg)$/i, '')
+                        };
+                    });
+
+                document.getElementById('output').innerHTML += '<h2>Found Files:</h2><pre>' + JSON.stringify(files, null, 2) + '</pre>';
+            } catch (error) {
+                document.getElementById('output').innerHTML = '<h2>Error:</h2><pre>' + error.message + '</pre>';
+            }
+        }
+        testSongs();
+    </script>
+</body>
+
+</html>
